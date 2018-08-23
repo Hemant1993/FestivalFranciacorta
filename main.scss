@@ -1,0 +1,230 @@
+$primary-color: #dddddd;
+
+%common-initial {
+    position: fixed;
+    border-radius: 50%;
+    height: 10vw;
+    width: 10vw;
+    background-color: #ffd300;
+    z-index:-10;
+}
+
+%common-festival {
+    position: fixed;
+    display: flex;
+    font-family: 'Indie Flower', cursive;
+    background-color: transparent;
+    font-size: 17vw;
+    opacity: 1;
+    z-index: 10;
+}
+
+body {
+    background-color: $primary-color;
+    font-size: 100%;
+}
+
+.slider {
+    position: fixed;
+    font-family: 'Playfair Display', serif;
+    display: flex;
+    z-index: 20;
+    font-size: 13.5vw;
+    margin-top: 8vw;
+    margin-left: 8vw;
+    @for $i from 1 through 9 { 
+        div:nth-child(#{$i}) {
+            animation: slide 300ms #{2600+($i * 60)}ms forwards;
+        }
+    }
+}
+
+.slider div {
+    opacity: 0;
+}
+
+.slider2 {
+    position: fixed;
+    font-family: 'Playfair Display', serif;
+    display: flex;
+    z-index: 20;
+    font-size: 13.5vw;
+    margin-top: 22vw;
+    margin-left: 15vw;
+    @for $i from 1 through 12 { 
+        div:nth-child(#{$i}) {
+            animation: slide 300ms #{3100+($i * 60)}ms forwards;
+        }
+    }
+}
+
+.slider2 div {
+    opacity: 0;
+}
+
+
+@keyframes slide {
+    from{
+        opacity: 0;
+      transform: translate(-3vw,6vw);
+    }
+  to{
+    opacity: 0.6;
+    transform: translate(1vw,1vw);
+  }
+}
+
+.slider-down {
+    @for $i from 8 through 0 { 
+        div:nth-child(#{$i}) {
+            animation: slidedown 300ms #{480 - ($i * 60)}ms forwards;
+        }
+    }
+}
+
+.slider-down div{
+    opacity: 0.6;
+    transform: translate(1vw,1vw);
+}
+
+.slider-down2 {
+    @for $i from 11 through 0 { 
+        div:nth-child(#{$i}) {
+            animation: slidedown 300ms #{720 - ($i * 60)}ms forwards;
+        }
+    }
+}
+
+.slider-down2 div{
+    opacity: 0.6;
+    transform: translate(1vw,1vw);
+}
+
+@keyframes slidedown {
+    from{
+        opacity: 0.6;
+        transform: translate(1vw,1vw);
+    }
+  to{
+    opacity: 0;
+    transform: translate(-3vw,6vw);
+  }
+}
+
+.transwrite {
+    @extend %common-festival;
+    fill: none;
+    stroke-width: 1;
+    stroke: #444444;
+    margin-top: 11vw;
+    tspan > tspan{
+        stroke-dasharray: 1500;
+        stroke-dashoffset: -1500;
+        @for $i from 1 to 5 {
+            &:nth-of-type(#{$i}) {
+                animation: draw 300ms #{3700+($i * 150)}ms forwards;
+            }
+        }
+    }
+}
+
+@keyframes draw {
+    100% {
+        stroke-dashoffset: 0;
+        fill: #444444;
+    }
+}
+
+.transwrite-down {
+    stroke: #444444;
+    fill: #444444;
+    tspan > tspan{
+        stroke-dasharray: 1500;
+        stroke-dashoffset: 0;
+        @for $i from 4 to 0 {
+            &:nth-of-type(#{$i}) {
+                animation: drawdown 300ms #{750 - ($i * 150) }ms forwards;
+            }
+        }
+    }
+}
+
+@keyframes drawdown {
+    100% {
+        stroke-dashoffset: -1500;
+        fill: none;
+    }
+}
+
+.circle1 {
+    @extend %common-initial;
+    left: 42vw;
+    top: 19vw;
+}
+
+.circle2 {
+    @extend %common-initial;
+    left: 42vw;
+    top: 15vw;
+}
+
+.circle3 {
+    @extend %common-initial;
+    left: 46.1vw;
+    top: 19vw;
+}
+
+.circle4 {
+    @extend %common-initial;
+    left: 42vw;
+    top: 23vw;
+}
+
+.circle5 {
+    @extend %common-initial;
+    left: 38.1vw;
+    top: 19vw;
+}
+
+.circle6 {
+    @extend %common-initial;
+    left: 44.5vw;
+    top: 15.8vw;
+}
+
+.circle7 {
+    @extend %common-initial;
+    left: 44.5vw;
+    top: 22.2vw;
+}
+
+.circle8 {
+    @extend %common-initial;
+    left: 39.6vw;
+    top: 22.1vw;
+}
+
+.circle9 {
+    @extend %common-initial;
+    left: 39.6vw;
+    top: 15.9vw;
+}
+
+.bersi {
+    position: fixed;
+    z-index: -5;
+    height: 10vw;
+    width: 10vw;
+    margin-top: 18.5vw;
+    margin-left: 41.5vw;
+}
+
+.crystalclear{
+    position: fixed;
+    z-index: 100;
+    font-family: 'Playfair Display', serif;
+    margin: 1vw 2vw 2vw 2vw;
+    width: 100%;
+    font-size: 1.2vw;
+    letter-spacing: 0.05vw;
+}

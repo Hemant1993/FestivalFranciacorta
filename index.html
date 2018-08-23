@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" type="text/css" href="main.css">
+        <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Playfair+Display" rel="stylesheet">
+
+        <title>My design</title>
+    </head>
+    <body>
+        <div>
+            <div class="initial">
+                <span class="circle"></span>
+                <span class="circle1"></span>
+                <span class="circle2"></span>
+                <span class="circle3"></span>
+                <span class="circle4"></span>
+                <span class="circle5"></span>
+                <span class="circle6"></span>
+                <span class="circle7"></span>
+                <span class="circle8"></span>
+                <span class="circle9"></span>
+                <img class="bersi" src="images.png" alt="bersi"/> 
+            </div>
+            <div class="slider">
+                <div>F</div>
+                <div>e</div>
+                <div>s</div>
+                <div>t</div>
+                <div>i</div>
+                <div>v</div>
+                <div>a</div>
+                <div>l</div>
+            </div>
+            <div class="slider2">
+                <div>F</div>
+                <div>r</div>
+                <div>a</div>
+                <div>n</div>
+                <div>c</div>
+                <div>i</div>
+                <div>a</div>
+                <div>c</div>
+                <div>o</div>
+                <div>t</div>
+                <div>a</div>
+            </div>
+            <div class="festival">
+                <svg  class="transwrite" viewbox="0 0 1500 300"
+                    xmlns="http://www.w3.org/2000/svg" 
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                >
+                    <g stroke="none">
+                        <text stroke="#000" >
+                            <tspan x="900" y="170">
+                                   <tspan>2</tspan><!--
+                                --><tspan>0</tspan><!--
+                                --><tspan>1</tspan><!--
+                                --><tspan>8</tspan>
+                            </tspan>
+                        </text>
+                    </g>
+                </svg>
+            </div>
+            <div class="crystalclear">
+                <div>
+                        <p>A crystal clear sky calls for a party!</p>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script
+        src="https://code.jquery.com/jquery-2.2.4.min.js"
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+        crossorigin="anonymous">
+    </script>
+    <script>
+        $( document ).ready(function() {
+            setTimeout(function(){ $('.bersi').fadeOut() }, 1000);
+            setTimeout(function(){$('.circle1').animate({top: "7vw",left: "30vw",height: "35vw", width: "35vw",}, 1000);}, 1500);
+            setTimeout(function(){$('.circle2').animate({top: "3vw",left: "30vw",height: "35vw", width: "35vw",},1000);}, 1500);
+            setTimeout(function(){$('.circle3').animate({top: "7vw",left: "34.1vw",height: "35vw", width: "35vw",},1000);}, 1500);
+            setTimeout(function(){$('.circle4').animate({top: "11vw",left: "30vw",height: "35vw", width: "35vw",},1000);}, 1500);
+            setTimeout(function(){$('.circle5').animate({top: "7vw",left: "26.1vw",height: "35vw", width: "35vw",},1000);}, 1500);
+            setTimeout(function(){$('.circle6').animate({top: "3.8vw",left: "32.5vw",height: "35vw", width: "35vw",},1000);}, 1500);
+            setTimeout(function(){$('.circle7').animate({top: "10.2vw",left: "32.5vw",height: "35vw", width: "35vw",},1000);}, 1500);
+            setTimeout(function(){$('.circle8').animate({top: "10.1vw",left: "27.6vw",height: "35vw", width: "35vw",},1000);}, 1500);
+            setTimeout(function(){$('.circle9').animate({top: "3.9vw",left: "27.6vw",height: "35vw", width: "35vw",},1000);}, 1500);
+            setTimeout(function(){ $('.transwrite').addClass("transwrite-down") }, 4900);
+            setTimeout(function(){ $('.slider2').addClass("slider-down2") }, 5900);
+            setTimeout(function(){ $('.slider').addClass("slider-down") }, 6900);
+        });
+    </script>
+</html>
