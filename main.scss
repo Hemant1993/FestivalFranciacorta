@@ -19,6 +19,15 @@ $primary-color: #dddddd;
     z-index: 10;
 }
 
+%common-subcontent {
+    position: relative;
+    font-family: 'Playfair Display', serif;
+    font-size: 3.1vw;
+    font-weight: bold;
+    margin-top: 1.5vw;
+    display: inline-block;
+}
+
 body {
     background-color: $primary-color;
     font-size: 100%;
@@ -210,6 +219,25 @@ body {
     top: 15.9vw;
 }
 
+.circleanimation {
+    animation: expand 3500ms infinite ;
+}
+
+@keyframes expand {
+    0% {
+        height: 35vw;
+        width: 35vw;
+    }
+    50% {
+        height: 37vw;
+        width: 37vw;
+    }
+    100%{
+        height: 35vw;
+        width: 35vw;
+    }
+}
+
 .bersi {
     position: fixed;
     z-index: -5;
@@ -221,10 +249,71 @@ body {
 
 .crystalclear{
     position: fixed;
-    z-index: 100;
+    z-index: 50;
     font-family: 'Playfair Display', serif;
     margin: 1vw 2vw 2vw 2vw;
     width: 100%;
-    font-size: 1.2vw;
+    font-size: 1.15vw;
     letter-spacing: 0.05vw;
+    opacity: 0;
+    animation: appear 100ms 7680ms forwards;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.contentmenu {
+    position: fixed;
+    margin: 5vw 13vw;
+    z-index: 60;
+}
+
+.subcontentmenu {
+    @extend %common-subcontent;
+}
+
+.indexletter {
+    position: relative;
+    display: inline-flex;
+}
+
+.indexletter div{
+    margin-right: 0.1vw;
+    opacity: 0;
+    transform: translate(1vw,1vw);
+}
+
+.indexanimation1 {
+    @for $i from 1 through 42 { 
+        div:nth-child(#{$i}) {
+            animation: indexslide 200ms #{$i * 40}ms forwards;
+        }
+    }
+}
+
+.indexbreakanimation {
+            animation: indexslide 200ms 40ms forwards;
+}
+
+@keyframes indexslide {
+    from{
+        opacity: 0;
+        transform: translate(-3vw,6vw);
+    }
+  to{
+    opacity: 1;
+    transform: translate(1vw,1vw);
+  }
+}
+
+.underlined {
+    position: fixed;
+    z-index: 55;
+    opacity: 0;
 }

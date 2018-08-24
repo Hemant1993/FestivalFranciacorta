@@ -15,6 +15,14 @@
   opacity: 1;
   z-index: 10; }
 
+.subcontentmenu {
+  position: relative;
+  font-family: 'Playfair Display', serif;
+  font-size: 3.1vw;
+  font-weight: bold;
+  margin-top: 1.5vw;
+  display: inline-block; }
+
 body {
   background-color: #dddddd;
   font-size: 100%; }
@@ -227,6 +235,19 @@ body {
   left: 39.6vw;
   top: 15.9vw; }
 
+.circleanimation {
+  animation: expand 3500ms infinite; }
+
+@keyframes expand {
+  0% {
+    height: 35vw;
+    width: 35vw; }
+  50% {
+    height: 37vw;
+    width: 37vw; }
+  100% {
+    height: 35vw;
+    width: 35vw; } }
 .bersi {
   position: fixed;
   z-index: -5;
@@ -237,11 +258,132 @@ body {
 
 .crystalclear {
   position: fixed;
-  z-index: 100;
+  z-index: 50;
   font-family: 'Playfair Display', serif;
   margin: 1vw 2vw 2vw 2vw;
   width: 100%;
-  font-size: 1.2vw;
-  letter-spacing: 0.05vw; }
+  font-size: 1.15vw;
+  letter-spacing: 0.05vw;
+  opacity: 0;
+  animation: appear 100ms 7680ms forwards; }
+
+@keyframes appear {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+.contentmenu {
+  position: fixed;
+  margin: 5vw 13vw;
+  z-index: 60; }
+
+.indexletter {
+  position: relative;
+  display: inline-flex; }
+
+.indexletter div {
+  margin-right: 0.1vw;
+  opacity: 0;
+  transform: translate(1vw, 1vw); }
+
+.indexanimation1 div:nth-child(1) {
+  animation: indexslide 200ms 40ms forwards; }
+.indexanimation1 div:nth-child(2) {
+  animation: indexslide 200ms 80ms forwards; }
+.indexanimation1 div:nth-child(3) {
+  animation: indexslide 200ms 120ms forwards; }
+.indexanimation1 div:nth-child(4) {
+  animation: indexslide 200ms 160ms forwards; }
+.indexanimation1 div:nth-child(5) {
+  animation: indexslide 200ms 200ms forwards; }
+.indexanimation1 div:nth-child(6) {
+  animation: indexslide 200ms 240ms forwards; }
+.indexanimation1 div:nth-child(7) {
+  animation: indexslide 200ms 280ms forwards; }
+.indexanimation1 div:nth-child(8) {
+  animation: indexslide 200ms 320ms forwards; }
+.indexanimation1 div:nth-child(9) {
+  animation: indexslide 200ms 360ms forwards; }
+.indexanimation1 div:nth-child(10) {
+  animation: indexslide 200ms 400ms forwards; }
+.indexanimation1 div:nth-child(11) {
+  animation: indexslide 200ms 440ms forwards; }
+.indexanimation1 div:nth-child(12) {
+  animation: indexslide 200ms 480ms forwards; }
+.indexanimation1 div:nth-child(13) {
+  animation: indexslide 200ms 520ms forwards; }
+.indexanimation1 div:nth-child(14) {
+  animation: indexslide 200ms 560ms forwards; }
+.indexanimation1 div:nth-child(15) {
+  animation: indexslide 200ms 600ms forwards; }
+.indexanimation1 div:nth-child(16) {
+  animation: indexslide 200ms 640ms forwards; }
+.indexanimation1 div:nth-child(17) {
+  animation: indexslide 200ms 680ms forwards; }
+.indexanimation1 div:nth-child(18) {
+  animation: indexslide 200ms 720ms forwards; }
+.indexanimation1 div:nth-child(19) {
+  animation: indexslide 200ms 760ms forwards; }
+.indexanimation1 div:nth-child(20) {
+  animation: indexslide 200ms 800ms forwards; }
+.indexanimation1 div:nth-child(21) {
+  animation: indexslide 200ms 840ms forwards; }
+.indexanimation1 div:nth-child(22) {
+  animation: indexslide 200ms 880ms forwards; }
+.indexanimation1 div:nth-child(23) {
+  animation: indexslide 200ms 920ms forwards; }
+.indexanimation1 div:nth-child(24) {
+  animation: indexslide 200ms 960ms forwards; }
+.indexanimation1 div:nth-child(25) {
+  animation: indexslide 200ms 1000ms forwards; }
+.indexanimation1 div:nth-child(26) {
+  animation: indexslide 200ms 1040ms forwards; }
+.indexanimation1 div:nth-child(27) {
+  animation: indexslide 200ms 1080ms forwards; }
+.indexanimation1 div:nth-child(28) {
+  animation: indexslide 200ms 1120ms forwards; }
+.indexanimation1 div:nth-child(29) {
+  animation: indexslide 200ms 1160ms forwards; }
+.indexanimation1 div:nth-child(30) {
+  animation: indexslide 200ms 1200ms forwards; }
+.indexanimation1 div:nth-child(31) {
+  animation: indexslide 200ms 1240ms forwards; }
+.indexanimation1 div:nth-child(32) {
+  animation: indexslide 200ms 1280ms forwards; }
+.indexanimation1 div:nth-child(33) {
+  animation: indexslide 200ms 1320ms forwards; }
+.indexanimation1 div:nth-child(34) {
+  animation: indexslide 200ms 1360ms forwards; }
+.indexanimation1 div:nth-child(35) {
+  animation: indexslide 200ms 1400ms forwards; }
+.indexanimation1 div:nth-child(36) {
+  animation: indexslide 200ms 1440ms forwards; }
+.indexanimation1 div:nth-child(37) {
+  animation: indexslide 200ms 1480ms forwards; }
+.indexanimation1 div:nth-child(38) {
+  animation: indexslide 200ms 1520ms forwards; }
+.indexanimation1 div:nth-child(39) {
+  animation: indexslide 200ms 1560ms forwards; }
+.indexanimation1 div:nth-child(40) {
+  animation: indexslide 200ms 1600ms forwards; }
+.indexanimation1 div:nth-child(41) {
+  animation: indexslide 200ms 1640ms forwards; }
+.indexanimation1 div:nth-child(42) {
+  animation: indexslide 200ms 1680ms forwards; }
+
+.indexbreakanimation {
+  animation: indexslide 200ms 40ms forwards; }
+
+@keyframes indexslide {
+  from {
+    opacity: 0;
+    transform: translate(-3vw, 6vw); }
+  to {
+    opacity: 1;
+    transform: translate(1vw, 1vw); } }
+.underlined {
+  position: fixed;
+  z-index: 55;
+  opacity: 0; }
 
 /*# sourceMappingURL=main.css.map */
