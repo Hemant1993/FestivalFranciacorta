@@ -261,17 +261,65 @@ body {
   z-index: 50;
   font-family: 'Playfair Display', serif;
   margin: 1vw 2vw 2vw 2vw;
-  width: 100%;
   font-size: 1.15vw;
   letter-spacing: 0.05vw;
   opacity: 0;
+  display: flex;
   animation: appear 100ms 7680ms forwards; }
+
+.space {
+  margin-right: 60vw; }
+
+#insta {
+  font-size: 2.5vw;
+  padding: 0.5vw;
+  padding-right: 1.5vw; }
+
+#insta2 {
+  padding: 0.5vw;
+  padding-right: 1.5vw; }
+
+.lowercrystal {
+  position: fixed;
+  z-index: 50;
+  display: flex;
+  font-size: 3vw;
+  bottom: 1vw;
+  left: 2vw;
+  opacity: 0;
+  animation: appear 100ms 7680ms forwards; }
+
+.news {
+  position: fixed;
+  z-index: 45;
+  display: flex;
+  bottom: 1vw;
+  left: 10vw;
+  overflow: hidden;
+  height: 3.5vw;
+  opacity: 0;
+  animation: appear 100ms 7680ms forwards; }
+
+.newspara {
+  white-space: nowrap;
+  padding: 1vw 0.5vw 0.5vw 0.5vw;
+  animation: paraslide 30s linear 1s infinite forwards; }
+
+.newspara2 {
+  white-space: nowrap;
+  padding: 1vw 0.5vw 0.5vw 0.5vw;
+  animation: paraslide 30s linear 16s infinite forwards; }
 
 @keyframes appear {
   from {
     opacity: 0; }
   to {
     opacity: 1; } }
+@keyframes paraslide {
+  0% {
+    transform: translateX(100vw); }
+  100% {
+    transform: translateX(-90vw); } }
 .contentmenu {
   position: fixed;
   margin: 5vw 13vw;
@@ -372,7 +420,7 @@ body {
   animation: indexslide 200ms 1680ms forwards; }
 
 .indexbreakanimation {
-  animation: indexslide 200ms 40ms forwards; }
+  animation: indexslide 200ms forwards; }
 
 @keyframes indexslide {
   from {
