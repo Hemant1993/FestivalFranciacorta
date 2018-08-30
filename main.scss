@@ -31,6 +31,11 @@ $primary-color: #dddddd;
 body {
     background-color: $primary-color;
     font-size: 100%;
+    cursor: url("mouse-pointer-solid.svg"), default;
+}
+
+a{
+    color: inherit;
 }
 
 .slider {
@@ -270,42 +275,43 @@ body {
 }
 
 #insta2 {
+    cursor: url("mouse-pointer-solid.svg"), default;
     padding: 0.5vw;
     padding-right:1.5vw;
 }
 
-.lowercrystal {
+.lowerbar {
     position: fixed;
     z-index: 50;
     display: flex;
-    font-size: 3vw;
     bottom: 1vw;
-    left: 2vw;
     opacity: 0;
     animation: appear 100ms 7680ms forwards;
+}
+
+.lowercrystal {
+    display: flex;
+    font-size: 3vw;
+    left: 2vw; 
 }
 
 .news {
-    position: fixed;
-    z-index: 45;
-    display: flex;
-    bottom: 1vw;
-    left: 10vw;
+    left: 7vw;
     overflow: hidden;
     height: 3.5vw;
-    opacity: 0;
-    animation: appear 100ms 7680ms forwards;
+    white-space: nowrap;
 }
 
 .newspara {
-    white-space: nowrap;
+    position: fixed;
     padding: 1vw 0.5vw 0.5vw 0.5vw;
     animation: paraslide 30s linear 1s infinite forwards;
 }
 
 .newspara2 {
-    white-space: nowrap;
+    position: fixed;
     padding: 1vw 0.5vw 0.5vw 0.5vw;
+    transform: translateX(120vw);
     animation: paraslide 30s linear 16s infinite forwards;
 }
 
